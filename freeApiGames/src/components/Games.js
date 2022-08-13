@@ -3,8 +3,7 @@ import "./GamesStyle.css"
 
 export const Games = ({games=[]}) => {  //[] this is array, if you don't receive anything, it's empty
   
-  
-  
+
   return (
     <div className="container-fluid" id="contfluid">
       <div className="row">

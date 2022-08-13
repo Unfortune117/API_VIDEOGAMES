@@ -6,6 +6,7 @@ import { Pagination } from "./components/Pagination";
 
 function App() {
   const [games, setGames] = useState([]);
+  const [search, setSearch] = useState("")
 
   const initialUrl = "/games";
 
@@ -19,6 +20,27 @@ function App() {
   useEffect(() => {
     fetchGames(initialUrl);
   }, []);
+  
+
+  const searcher = (e) =>{
+    setSearch(e.target.value)
+  }
+
+
+  //FORM FILTER 1
+
+  /* let results = []
+  if(!search){
+    results = games
+  }else{
+    results = games.filter((dato)=>
+    dato.title.toLowerCase().includes(search.toLocaleLowerCase())
+    )
+  } */
+
+  //FORM FILTER 1
+
+  const results = ! search ? games : games.filter((dato)=> dato.title.toLowerCase().includes(search.toLocaleLowerCase()))
 
   return (
     <>
@@ -26,7 +48,8 @@ function App() {
 
       <div className="container">
         <Pagination></Pagination>
-        <Games games={games}></Games>
+        <input value={search} onChange={searcher} type="text" placeholder="Search" className="form-control" id="searchBar"></input>
+        <Games games={results}></Games>
       </div>
     </>
   );
