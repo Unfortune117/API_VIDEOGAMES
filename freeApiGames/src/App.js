@@ -45,9 +45,7 @@ function App() {
   return (
     <>
       <Navbar brand="FREE VIDEOGAMES APP"></Navbar>
-
       <div className="container">
-        <Pagination></Pagination>
         <input value={search} onChange={searcher} type="text" placeholder="Search" className="form-control" id="searchBar"></input>
         <Games games={results}></Games>
       </div>

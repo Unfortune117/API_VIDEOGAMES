@@ -13,3 +13,7 @@
     line-clamp: 1;
     overflow: hidden;
 }
+
+#propertyCard{
+    margin-bottom: 1rem;
+}
