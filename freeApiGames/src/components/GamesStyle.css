@@ -17,3 +17,16 @@
 #propertyCard{
     margin-bottom: 1rem;
 }
+
+#propertyCard:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3%);
+}
+
+#imgproperty{
+    cursor: pointer;
+}
+
+#buttonproperty{
+    margin-left: 4rem;
+}

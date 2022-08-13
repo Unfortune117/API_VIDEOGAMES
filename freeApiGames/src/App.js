@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { Navbar } from "./components/Navbar";
 import { Games } from "./components/Games";
-import { Pagination } from "./components/Pagination";
 
 function App() {
   const [games, setGames] = useState([]);
