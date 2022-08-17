@@ -37,7 +37,7 @@ function App() {
     )
   } */
 
-  //FORM FILTER 1
+  //FORM FILTER 2
 
   const results = ! search ? games : games.filter((dato)=> dato.title.toLowerCase().includes(search.toLocaleLowerCase()))
 
